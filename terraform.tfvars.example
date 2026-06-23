@@ -1,0 +1,18 @@
+# Resource Group
+resource_group_name = "rg-aks-demo"
+location            = "East US"
+
+# Networking
+vnet_name       = "vnet-aks-demo"
+address_space   = ["10.0.0.0/16"]
+subnet_name     = "subnet-aks"
+subnet_prefixes = ["10.0.1.0/24"]
+nsg_name        = "nsg-aks-demo"
+
+# AKS Cluster
+cluster_name       = "aks-demo-cluster"
+dns_prefix         = "aksdemo"
+kubernetes_version = "1.28.0"
+node_count         = 2
+vm_size            = "Standard_D2s_v3"
+environment        = "dev"
